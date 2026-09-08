@@ -1,0 +1,274 @@
+/* ======================================================
+   PASO 1: LO MÁS GENERAL — Toda la página
+   ====================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #F8EAFD, #EDE7F6);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #4B0082;
+}
+
+/* ======================================================
+   PASO 2: LA CABECERA — Logo y tus datos
+   ====================================================== */
+#cabecera-principal {
+    background: linear-gradient(90deg, #AB47BC, #6A1B9A);
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+#logo-sena {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: white;
+    color: #6A1B9A;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#datos-estudiante {
+    text-align: center;
+}
+
+#datos-estudiante h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#texto-creado-por {
+    margin-top: 10px;
+    font-style: italic;
+    color: #FCE4EC;
+}
+
+/* ======================================================
+   PASO 3: CONTENEDOR Y TARJETAS
+   ====================================================== */
+#contenido-principal {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 30px;
+}
+
+.tarjeta {
+    background: #FEF7FF;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(106, 27, 154, 0.15);
+    border: 3px solid #CE93D8;
+}
+
+.tarjeta h2 {
+    color: #6A1B9A;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #CE93D8;
+}
+
+/* ======================================================
+   PASO 4: TRABAJO 1 — Calculadora de Fracciones
+   ====================================================== */
+#caja-calculadora-fracciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.fraccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fraccion input {
+    width: 75px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    color: #6A1B9A;
+    outline: none;
+    padding: 5px 0;
+}
+
+.linea-fraccion {
+    width: 80px;
+    height: 5px;
+    background: #AB47BC;
+    border-radius: 3px;
+    margin: 4px 0;
+}
+
+.fraccion input::-webkit-outer-spin-button,
+.fraccion input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#que-operacion {
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    color: #AB47BC;
+    cursor: pointer;
+}
+
+#boton-calcular {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(90deg, #CE93D8, #AB47BC);
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+#boton-calcular:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #AB47BC, #6A1B9A);
+}
+
+#boton-calcular:active {
+    transform: scale(0.95);
+}
+
+.caja-resultado {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background: #F3E5F5;
+    border-radius: 15px;
+}
+
+.fraccion-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6A1B9A;
+}
+
+/* ======================================================
+   PASO 5: TRABAJO 2 — Ejercicios de Funciones
+   ====================================================== */
+#texto-pregunta {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#caja-opciones {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#caja-opciones button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(135deg, #E1BEE7, #CE93D8);
+    color: #4B0082;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#caja-opciones button:hover {
+    background: #AB47BC;
+    color: white;
+    transform: scale(1.08);
+}
+
+#caja-opciones button:active {
+    transform: scale(0.92);
+}
+
+#boton-nuevo-ejercicio {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(90deg, #CE93D8, #AB47BC);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#boton-nuevo-ejercicio:hover {
+    background: linear-gradient(90deg, #AB47BC, #6A1B9A);
+    transform: scale(1.05);
+}
+
+#boton-nuevo-ejercicio:active {
+    transform: scale(0.95);
+}
+
+/* ======================================================
+   PASO 6: TRABAJO 3 — Video
+   ====================================================== */
+#caja-video {
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+    border: 4px solid #CE93D8;
+}
+
+#caja-video iframe {
+    width: 100%;
+}
+
+#texto-video {
+    text-align: center;
+    font-style: italic;
+    color: #6A1B9A;
+}
+
+/* ======================================================
+   PASO 7: TRABAJO 4 — Pendiente
+   ====================================================== */
+#caja-pendiente {
+    text-align: center;
+    padding: 30px;
+    color: #886699;
+    font-style: italic;
+}
+
+/* ======================================================
+   PASO 8 — PIE DE PÁGINA
+   ====================================================== */
+#pie-pagina {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(90deg, #AB47BC, #6A1B9A);
+    color: white;
+    margin-top: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}

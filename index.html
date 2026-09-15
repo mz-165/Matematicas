@@ -7,12 +7,9 @@
 
     <!-- Conectamos el archivo de colores -->
     <link rel="stylesheet" href="styles.css">
+        <script src="funciones.js"></script>
 </head>
 <body>
-
-    <!-- ==============================================
-    CABECERA: Logo y tus datos del SENA
-    ============================================== -->
     <header id="cabecera-principal">
         <div id="logo-sena">SENA</div>
         <div id="datos-estudiante">
@@ -20,29 +17,23 @@
             <p><strong>Aprendiz:</strong> Sharone Michelle Correa Zabala</p>
             <p><strong>Ficha:</strong> 3387498</p>
             <p><strong>Instructor:</strong> Manuel Galidez</p>
-            <p><strong>Fecha:</strong> 01 de septiembre de 2026</p>
-            <p id="texto-creado-por"> Creado por Sharone </p>
+            <p><strong>Fecha:</strong> 15 de septiembre de 2026</p>
         </div>
     </header>
 
     <main id="contenido-principal">
 
-    <!-- ==============================================
-    TRABAJO 1: Calculadora de Fracciones
-    ============================================== -->
     <section id="trabajo-1" class="tarjeta">
         <h2>1. Calculadora de Fracciones</h2>
 
         <div id="caja-calculadora-fracciones">
 
-            <!-- Primera fracción -->
             <div class="fraccion">
                 <input type="number" id="num-arriba-1" placeholder="Numerador">
                 <div class="linea-fraccion"></div>
                 <input type="number" id="num-abajo-1" placeholder="Denominador">
             </div>
 
-            <!-- Operación: + - × ÷ -->
             <select id="que-operacion">
                 <option value="sumar">+</option>
                 <option value="restar">−</option>
@@ -50,24 +41,18 @@
                 <option value="dividir">÷</option>
             </select>
 
-            <!-- Segunda fracción -->
             <div class="fraccion">
                 <input type="number" id="num-arriba-2" placeholder="Numerador">
                 <div class="linea-fraccion"></div>
                 <input type="number" id="num-abajo-2" placeholder="Denominador">
             </div>
 
-            <!-- Botón para calcular -->
             <button id="boton-calcular" onclick="hacerOperacion()">Calcular</button>
         </div>
 
-        <!-- Aquí aparecerá el resultado -->
         <div id="resultado-fracciones" class="caja-resultado"></div>
     </section>
 
-    <!-- ==============================================
-    TRABAJO 2: Juego de Funciones
-    ============================================== -->
     <section id="trabajo-2" class="tarjeta">
         <h2>2. Ejercicios de Funciones</h2>
 
@@ -86,47 +71,95 @@
         <div id="resultado-ejercicios" class="caja-resultado"></div>
     </section>
 
-        <!-- ==============================================
-    TRABAJO 3: Video
-    ============================================== -->
     <section id="trabajo-3" class="tarjeta">
         <h2>3. Estudio Estadistico</h2>
         <div id="caja-video">
             <iframe 
                 width="100%" 
-                height="315" 
-                src="https://www.youtube-nocookie.com/embed/Jdpau-iYnFQ" 
-                title="Explicación de fracciones"
+                height="500"
+                src="img/video.mp4" 
+                title="hola"
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen
                 loading="lazy">
             </iframe>
         </div>
-        <p id="texto-video">Explicacion de un estudio estadistico</p>
+        <p id="texto-video">Consumo de sustancias psicoactivas <br>DANE 2019</p>
     </section>
-    <!-- ==============================================
-    TRABAJO 4: Pendiente
-    ============================================== -->
+    
     <section id="trabajo-4" class="tarjeta">
-        <h2>📌 4. Próximamente</h2>
-        <div id="caja-pendiente">
-            <p>Aquí irá el cuarto trabajo cuando lo tengas listo.</p>
-            <p>💜 ¡Pronto lo tendremos! 💜</p>
+        <h2>4. Figuras Geométricas</h2>
+
+        <div class="caja-figura">
+            <div class="dibujo-cuadrado"></div>
+            <h3>Cuadrado</h3>
+            <label>Lado:</label>
+            <input type="number" id="cuadrado-lado" placeholder="Escribe el lado">
+            <button onclick="calcularCuadrado()">Calcular</button>
+            <div id="cuadrado-resultado" class="caja-resultado">Resultados</div>
         </div>
+
+        <div class="caja-figura">
+            <div class="dibujo-rectangulo"></div>
+            <h3>Rectángulo</h3>
+            <label>Base:</label>
+            <input type="number" id="rectangulo-base" placeholder="Base">
+            <label>Altura:</label>
+            <input type="number" id="rectangulo-altura" placeholder="Altura">
+            <button onclick="calcularRectangulo()">Calcular</button>
+            <div id="rectangulo-resultado" class="caja-resultado">Resultados</div>
+        </div>
+
+        <div class="caja-figura">
+            <div class="dibujo-triangulo"></div>
+            <h3>Triángulo</h3>
+            <label>Lado 1:</label>
+            <input type="number" id="triangulo-lado1" placeholder="Lado 1">
+            <label>Lado 2:</label>
+            <input type="number" id="triangulo-lado2" placeholder="Lado 2">
+            <label>Lado 3:</label>
+            <input type="number" id="triangulo-lado3" placeholder="Lado 3">
+            <label>Base:</label>
+            <input type="number" id="triangulo-base" placeholder="Base">
+            <label>Altura:</label>
+            <input type="number" id="triangulo-altura" placeholder="Altura">
+            <button onclick="calcularTriangulo()">Calcular</button>
+            <div id="triangulo-resultado" class="caja-resultado">Resultados</div>
+        </div>
+
+        <div class="caja-figura">
+            <div class="dibujo-circulo"></div>
+            <h3>Círculo</h3>
+            <label>Radio:</label>
+            <input type="number" id="circulo-radio" placeholder="Radio">
+            <button onclick="calcularCirculo()">Calcular</button>
+            <div id="circulo-resultado" class="caja-resultado">Resultados</div>
+        </div>
+
+        <div class="caja-figura">
+            <div class="dibujo-trapecio"></div>
+            <h3>Trapecio</h3>
+            <label>Base mayor:</label>
+            <input type="number" id="trapecio-baseMayor" placeholder="Base mayor">
+            <label>Base menor:</label>
+            <input type="number" id="trapecio-baseMenor" placeholder="Base menor">
+            <label>Lado izquierdo:</label>
+            <input type="number" id="trapecio-lado1" placeholder="Lado izquierdo">
+            <label>Lado derecho:</label>
+            <input type="number" id="trapecio-lado2" placeholder="Lado derecho">
+            <label>Altura:</label>
+            <input type="number" id="trapecio-altura" placeholder="Altura">
+            <button onclick="calcularTrapecio()">Calcular</button>
+            <div id="trapecio-resultado" class="caja-resultado">Resultados</div>
+        </div>
+
     </section>
 
-    </main>
-
-    <!-- ==============================================
-    PIE DE PÁGINA
-    ============================================== -->
     <footer id="pie-pagina">
         <p>© 2026 Sharone Michelle Correa Zabala - Ficha 3387498 - SENA</p>
     </footer>
 
-    <!-- Conectamos el archivo de JavaScript -->
-    <script src="funciones.js"></script>
 
 </body>
 </html>

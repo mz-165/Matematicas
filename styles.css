@@ -1,6 +1,3 @@
-/* ======================================================
-   PASO 1: LO MÁS GENERAL — Toda la página
-   ====================================================== */
 body {
     margin: 0;
     padding: 0;
@@ -9,9 +6,6 @@ body {
     color: #4B0082;
 }
 
-/* ======================================================
-   PASO 2: LA CABECERA — Logo y tus datos
-   ====================================================== */
 #cabecera-principal {
     background: linear-gradient(90deg, #AB47BC, #6A1B9A);
     color: white;
@@ -53,9 +47,6 @@ body {
     color: #FCE4EC;
 }
 
-/* ======================================================
-   PASO 3: CONTENEDOR Y TARJETAS
-   ====================================================== */
 #contenido-principal {
     max-width: 1100px;
     margin: 30px auto;
@@ -79,9 +70,6 @@ body {
     border-bottom: 2px dashed #CE93D8;
 }
 
-/* ======================================================
-   PASO 4: TRABAJO 1 — Calculadora de Fracciones
-   ====================================================== */
 #caja-calculadora-fracciones {
     display: flex;
     align-items: center;
@@ -171,9 +159,6 @@ body {
     color: #6A1B9A;
 }
 
-/* ======================================================
-   PASO 5: TRABAJO 2 — Ejercicios de Funciones
-   ====================================================== */
 #texto-pregunta {
     font-size: 1.1rem;
     text-align: center;
@@ -230,9 +215,6 @@ body {
     transform: scale(0.95);
 }
 
-/* ======================================================
-   PASO 6: TRABAJO 3 — Video
-   ====================================================== */
 #caja-video {
     border-radius: 20px;
     overflow: hidden;
@@ -250,19 +232,115 @@ body {
     color: #6A1B9A;
 }
 
-/* ======================================================
-   PASO 7: TRABAJO 4 — Pendiente
-   ====================================================== */
-#caja-pendiente {
+.caja-figura {
+    padding: 25px;
+    margin: 25px auto;
+    background: #F3E5F5;
+    border-radius: 15px;
     text-align: center;
-    padding: 30px;
-    color: #886699;
-    font-style: italic;
+    max-width: 700px;
 }
 
-/* ======================================================
-   PASO 8 — PIE DE PÁGINA
-   ====================================================== */
+.caja-figura h3 {
+    color: #6A1B9A;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.caja-figura label {
+    font-weight: bold;
+    color: #6A1B9A;
+    margin: 0 8px;
+}
+
+.caja-figura input {
+    width: 80px;
+    padding: 6px;
+    border: 2px solid #CE93D8;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1rem;
+    color: #6A1B9A;
+    outline: none;
+    margin: 5px;
+}
+
+.caja-figura button {
+    padding: 8px 16px;
+    margin: 10px 5px;
+    border-radius: 18px;
+    border: none;
+    background: linear-gradient(90deg, #CE93D8, #AB47BC);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.caja-figura button:hover {
+    background: linear-gradient(90deg, #AB47BC, #6A1B9A);
+    transform: scale(1.05);
+}
+
+.caja-figura button:active {
+    transform: scale(0.95);
+}
+
+.caja-resultado {
+    margin-top: 15px;
+    padding: 12px;
+    background: #EDE7F6;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #6A1B9A;
+    display: inline-block;
+    min-width: 200px;
+}
+
+.dibujo-cuadrado {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #6A1B9A;
+    margin: 0 auto;
+    background: #EDE7F6;
+}
+
+.dibujo-rectangulo {
+    width: 100px;
+    height: 60px;
+    border: 3px solid #6A1B9A;
+    margin: 0 auto;
+    background: #EDE7F6;
+}
+
+.dibujo-triangulo {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #CE93D8;
+    margin: 0 auto;
+}
+
+.dibujo-circulo {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #6A1B9A;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #EDE7F6;
+}
+
+.dibujo-trapecio {
+    width: 100px;
+    height: 0;
+    border-bottom: 60px solid #CE93D8;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    margin: 0 auto;
+}
+
 #pie-pagina {
     text-align: center;
     padding: 25px;
